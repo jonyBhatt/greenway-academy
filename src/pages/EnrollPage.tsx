@@ -1,20 +1,19 @@
-import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import {
-  ArrowLeft,
-  User,
-  Mail,
-  Phone,
-  GraduationCap,
-  Calendar,
-  MapPin,
-  CheckCircle,
-  Send,
-  BookOpen,
-  Clock,
   Award,
+  BookOpen,
+  Calendar,
+  CheckCircle,
+  Clock,
+  GraduationCap,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  User
 } from 'lucide-react';
+import { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const EnrollPage = () => {
   const navigate = useNavigate();
