@@ -55,7 +55,7 @@ const Journey = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -78,7 +78,7 @@ const Journey = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold dark:text-white mb-6"
           >
             Your Journey with <span className="gradient-text">Greenway</span>
           </motion.h2>
@@ -110,7 +110,7 @@ const Journey = () => {
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               >
                 {/* Step Number */}
-                <div className="absolute -top-2 -left-2 w-8 h-8 rounded-full bg-slate-900 border border-white/20 flex items-center justify-center text-sm font-bold text-white z-10">
+                <div className="absolute -top-2 -left-2 w-8 h-8 rounded-full bg-card border border-white/20 flex items-center justify-center text-sm font-bold text-foreground z-10">
                   {index + 1}
                 </div>
 
@@ -125,11 +125,11 @@ const Journey = () => {
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step.icon className="w-8 h-8 dark:text-white" />
                   </motion.div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold dark:text-white mb-3">
                     {step.title}
                   </h3>
                   <p className="text-slate-400 leading-relaxed">
@@ -162,7 +162,7 @@ const Journey = () => {
               e.preventDefault();
               document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-green-500/30 transition-all btn-shine"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 dark:text-white font-semibold rounded-full hover:shadow-lg hover:shadow-green-500/30 transition-all btn-shine"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

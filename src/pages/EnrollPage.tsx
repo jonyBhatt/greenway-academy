@@ -53,7 +53,7 @@ const EnrollPage = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-background flex items-center justify-center px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -66,10 +66,10 @@ const EnrollPage = () => {
             transition={{ duration: 0.5, delay: 0.2, type: 'spring' }}
             className="w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mx-auto mb-6"
           >
-            <CheckCircle className="w-12 h-12 text-white" />
+            <CheckCircle className="w-12 h-12 text-foreground" />
           </motion.div>
-          <h2 className="text-3xl font-bold text-white mb-4">Registration Successful!</h2>
-          <p className="text-slate-400 mb-8">
+          <h2 className="text-3xl font-bold text-foreground mb-4">Registration Successful!</h2>
+          <p className="text-muted-foreground mb-8">
             Thank you for enrolling at Greenway Academy. Our team will contact you within 24 hours to discuss your programme.
           </p>
           <motion.button
@@ -86,7 +86,7 @@ const EnrollPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-background">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -133,7 +133,7 @@ const EnrollPage = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* <motion.button
             onClick={() => navigate('/')}
-            className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+            className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
             whileHover={{ x: -5 }}
           >
             <ArrowLeft className="w-5 h-5" />
@@ -160,7 +160,7 @@ const EnrollPage = () => {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-white tracking-tight">GREENWAY</span>
+              <span className="text-lg font-bold text-foreground tracking-tight">GREENWAY</span>
               <span className="text-xs font-medium text-blue-400 -mt-0.5">ACADEMY</span>
             </div>
           </div> */}
@@ -182,10 +182,10 @@ const EnrollPage = () => {
             <span className="inline-block text-green-400 font-semibold text-sm uppercase tracking-wider mb-4">
               Enrollment
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Enroll <span className="gradient-text">Now</span>
             </h1>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Fill out the form below to register for your preferred programme. Our team will contact you within 24 hours.
             </p>
           </motion.div>
@@ -202,7 +202,7 @@ const EnrollPage = () => {
               <div className="grid sm:grid-cols-2 gap-6">
                 {/* Full Name */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
                     <User className="w-4 h-4 text-green-400" />
                     Full Name *
                   </label>
@@ -212,14 +212,14 @@ const EnrollPage = () => {
                     value={formData.fullName}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 {/* Email */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
                     <Mail className="w-4 h-4 text-green-400" />
                     Email Address *
                   </label>
@@ -229,14 +229,14 @@ const EnrollPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 {/* Phone */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
                     <Phone className="w-4 h-4 text-green-400" />
                     Phone Number *
                   </label>
@@ -246,14 +246,14 @@ const EnrollPage = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
                     placeholder="+880 1XXX-XXXXXX"
                   />
                 </div>
 
                 {/* Education */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
                     <GraduationCap className="w-4 h-4 text-green-400" />
                     Current Education *
                   </label>
@@ -262,31 +262,31 @@ const EnrollPage = () => {
                     value={formData.education}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all appearance-none cursor-pointer"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all appearance-none cursor-pointer"
                   >
-                    <option value="" className="bg-slate-900">Select education level</option>
-                    <option value="o-levels" className="bg-slate-900">O Levels / SSC</option>
-                    <option value="a-levels" className="bg-slate-900">A Levels / HSC</option>
-                    <option value="bachelor" className="bg-slate-900">Bachelor&apos;s Degree</option>
-                    <option value="master" className="bg-slate-900">Master&apos;s Degree</option>
-                    <option value="other" className="bg-slate-900">Other</option>
+                    <option value="" className="bg-card">Select education level</option>
+                    <option value="o-levels" className="bg-card">O Levels / SSC</option>
+                    <option value="a-levels" className="bg-card">A Levels / HSC</option>
+                    <option value="bachelor" className="bg-card">Bachelor's Degree</option>
+                    <option value="master" className="bg-card">Master's Degree</option>
+                    <option value="other" className="bg-card">Other</option>
                   </select>
                 </div>
 
                 {/* Programme Selection */}
                 <div className="sm:col-span-2 space-y-2">
-                  <label className="text-sm font-medium text-slate-300 flex items-center gap-2">
+                  <label className="text-sm font-medium text-foreground flex items-center gap-2\">
                     <BookOpen className="w-4 h-4 text-green-400" />
                     Select Programme *
                   </label>
-                  <div className="grid sm:grid-cols-2 gap-3">
+                  <div className="grid sm:grid-cols-2 gap-3\">
                     {programmes.map((prog) => (
                       <motion.label
                         key={prog.value}
                         className={`relative flex items-center gap-3 p-4 rounded-xl border cursor-pointer transition-all ${
                           formData.programme === prog.value
                             ? 'border-green-500 bg-green-500/10'
-                            : 'border-white/10 bg-slate-900/30 hover:border-white/20'
+                            : 'border-white/10 bg-card/30 hover:border-white/20'
                         }`}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
@@ -299,12 +299,12 @@ const EnrollPage = () => {
                           onChange={handleChange}
                           className="sr-only"
                         />
-                        <prog.icon className={`w-5 h-5 ${formData.programme === prog.value ? 'text-green-400' : 'text-slate-400'}`} />
+                        <prog.icon className={`w-5 h-5 ${formData.programme === prog.value ? 'text-green-400' : 'text-muted-foreground'}`} />
                         <div className="flex-1">
-                          <div className={`text-sm font-medium ${formData.programme === prog.value ? 'text-white' : 'text-slate-300'}`}>
+                          <div className={`text-sm font-medium ${formData.programme === prog.value ? 'text-foreground' : 'text-foreground'}`}>
                             {prog.label}
                           </div>
-                          <div className="text-xs text-slate-500 flex items-center gap-1">
+                          <div className="text-xs text-muted-foreground/70 flex items-center gap-1">
                             <Clock className="w-3 h-3" />
                             {prog.duration}
                           </div>
@@ -315,7 +315,7 @@ const EnrollPage = () => {
                             animate={{ scale: 1 }}
                             className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center"
                           >
-                            <CheckCircle className="w-3 h-3 text-white" />
+                            <CheckCircle className="w-3 h-3 text-card-foreground" />
                           </motion.div>
                         )}
                       </motion.label>
@@ -334,7 +334,7 @@ const EnrollPage = () => {
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
                   />
                 </div>
 
@@ -349,14 +349,14 @@ const EnrollPage = () => {
                     name="address"
                     value={formData.address}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all"
                     placeholder="Your address"
                   />
                 </div>
 
                 {/* Message */}
                 <div className="sm:col-span-2 space-y-2">
-                  <label className="text-sm font-medium text-slate-300">
+                  <label className="text-sm font-medium text-foreground">
                     Additional Message (Optional)
                   </label>
                   <textarea
@@ -364,7 +364,7 @@ const EnrollPage = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-900/50 border border-white/10 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-card/50 border border-white/10 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all resize-none"
                     placeholder="Tell us about your goals and any questions you may have..."
                   />
                 </div>
@@ -391,13 +391,13 @@ const EnrollPage = () => {
             >
               {/* Contact Card */}
               <div className="glass rounded-2xl p-6 border border-white/5">
-                <h3 className="text-xl font-bold text-white mb-4">Need Help?</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Need Help?</h3>
                 <div className="space-y-4">
-                  <a href="tel:+8801322912091" className="flex items-center gap-3 text-slate-300 hover:text-green-400 transition-colors">
+                  <a href="tel:+8801322912091" className="flex items-center gap-3 text-muted-foreground hover:text-green-400 transition-colors">
                     <Phone className="w-5 h-5" />
                     +880 1322-912091
                   </a>
-                  <a href="mailto:admin@greenwayacademy.com" className="flex items-center gap-3 text-slate-300 hover:text-green-400 transition-colors">
+                  <a href="mailto:admin@greenwayacademy.com" className="flex items-center gap-3 text-muted-foreground hover:text-green-400 transition-colors">
                     <Mail className="w-5 h-5" />
                     admin@greenwayacademy.com
                   </a>
@@ -406,7 +406,7 @@ const EnrollPage = () => {
 
               {/* Steps Card */}
               <div className="glass rounded-2xl p-6 border border-white/5">
-                <h3 className="text-xl font-bold text-white mb-4">Enrollment Process</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Enrollment Process</h3>
                 <div className="space-y-4">
                   {[
                     { step: 1, text: 'Fill out the registration form' },
@@ -418,7 +418,7 @@ const EnrollPage = () => {
                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
                         {item.step}
                       </div>
-                      <span className="text-slate-300 text-sm">{item.text}</span>
+                      <span className="text-muted-foreground text-sm">{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -426,7 +426,7 @@ const EnrollPage = () => {
 
               {/* Features Card */}
               <div className="glass rounded-2xl p-6 border border-white/5">
-                <h3 className="text-xl font-bold text-white mb-4">Why Enroll With Us?</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Why Enroll With Us?</h3>
                 <div className="space-y-3">
                   {[
                     'Expert instructors with years of experience',
@@ -437,7 +437,7 @@ const EnrollPage = () => {
                   ].map((feature, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-slate-300 text-sm">{feature}</span>
+                      <span className="text-muted-foreground text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>

@@ -61,7 +61,7 @@ const Testimonials = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -85,7 +85,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6"
           >
             What Our <span className="gradient-text">Students</span> Say
           </motion.h2>
@@ -94,7 +94,7 @@ const Testimonials = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-400 text-lg max-w-2xl mx-auto"
+            className="text-muted-foreground text-lg max-w-2xl mx-auto"
           >
             Hear from our students about their experience at Greenway Academy
           </motion.p>
@@ -130,7 +130,7 @@ const Testimonials = () => {
                     </div>
                     {/* Quote Icon */}
                     <div className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg">
-                      <Quote className="w-6 h-6 text-white" />
+                      <Quote className="w-6 h-6 text-foreground" />
                     </div>
                   </div>
 
@@ -147,19 +147,19 @@ const Testimonials = () => {
                     </div>
 
                     {/* Quote */}
-                    <p className="text-lg lg:text-xl text-slate-300 leading-relaxed mb-6 italic">
+                    <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed mb-6 italic">
                       &quot;{testimonials[currentIndex].quote}&quot;
                     </p>
 
                     {/* Author Info */}
                     <div>
-                      <h4 className="text-xl font-bold text-white">
+                      <h4 className="text-xl font-bold text-foreground">
                         {testimonials[currentIndex].name}
                       </h4>
                       <p className="text-green-400 font-medium">
                         {testimonials[currentIndex].programme}
                       </p>
-                      <p className="text-slate-400 text-sm">
+                      <p className="text-muted-foreground text-sm">
                         Now at {testimonials[currentIndex].university}
                       </p>
                     </div>
@@ -230,10 +230,10 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div className="overflow-hidden">
-                  <h5 className="text-white font-semibold text-sm truncate">
+                  <h5 className="text-foreground font-semibold text-sm truncate">
                     {testimonial.name}
                   </h5>
-                  <p className="text-slate-400 text-xs truncate">
+                  <p className="text-muted-foreground text-xs truncate">
                     {testimonial.university}
                   </p>
                 </div>

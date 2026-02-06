@@ -29,7 +29,7 @@ const About = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/5 rounded-full blur-3xl" />
@@ -54,7 +54,7 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
 
               {/* Floating Badge */}
@@ -64,7 +64,7 @@ const About = () => {
                 animate={isInView ? { scale: 1, rotate: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.5, ease: [0.34, 1.56, 0.64, 1] }}
               >
-                <div className="text-center text-white">
+                <div className="text-center text-foreground">
                   <div className="text-3xl font-bold">12+</div>
                   <div className="text-xs">Years</div>
                 </div>
@@ -91,7 +91,7 @@ const About = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight"
             >
               Paving Your Academic Route for a{' '}
               <span className="gradient-text">Better Global Education</span>
@@ -101,7 +101,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-300 text-lg leading-relaxed mb-6"
+              className="text-muted-foreground text-lg leading-relaxed mb-6"
             >
               Greenway Academy is a premier education center dedicated to helping
               students achieve their dreams of studying abroad. We specialize in
@@ -113,7 +113,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-slate-400 leading-relaxed mb-8"
+              className="text-muted-foreground leading-relaxed mb-8"
             >
               Our expert instructors, modern facilities, and comprehensive curriculum
               ensure that every student receives the support they need to succeed.
@@ -141,8 +141,8 @@ const About = () => {
                     <stat.icon className="w-5 h-5 text-green-400" />
                   </div>
                   <div>
-                    <div className="text-xl font-bold text-white">{stat.value}</div>
-                    <div className="text-xs text-slate-400">{stat.label}</div>
+                    <div className="text-xl font-bold text-foreground">{stat.value}</div>
+                    <div className="text-xs text-muted-foreground">{stat.label}</div>
                   </div>
                 </motion.div>
               ))}

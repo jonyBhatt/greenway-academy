@@ -85,7 +85,7 @@ const WhyOTHM = () => {
     <section
       id="why-othm"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -115,7 +115,7 @@ const WhyOTHM = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6"
             >
               Why Choose <span className="text-blue-400">OTHM</span>?
             </motion.h2>
@@ -124,7 +124,7 @@ const WhyOTHM = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-300 text-lg leading-relaxed mb-6"
+              className="text-muted-foreground text-lg leading-relaxed mb-6"
             >
               OTHM (Organization for Tourism and Hospitality Management) is a UK-based
               awarding organization regulated by Ofqual. Their qualifications provide
@@ -136,7 +136,7 @@ const WhyOTHM = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-slate-400 leading-relaxed"
+              className="text-muted-foreground leading-relaxed"
             >
               With OTHM qualifications, you can progress directly to the final year
               of a Bachelor&apos;s degree or enter a Master&apos;s program, saving both time
@@ -163,11 +163,11 @@ const WhyOTHM = () => {
                 <div className="text-blue-400 font-bold text-lg mb-1">
                   {level.level}
                 </div>
-                <div className="text-white font-semibold mb-1">{level.title}</div>
-                <div className="text-slate-400 text-sm mb-2">
+                <div className="text-foreground font-semibold mb-1">{level.title}</div>
+                <div className="text-muted-foreground text-sm mb-2">
                   {level.description}
                 </div>
-                <div className="text-slate-500 text-xs">{level.duration}</div>
+                <div className="text-muted-foreground/80 text-xs">{level.duration}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -187,10 +187,10 @@ const WhyOTHM = () => {
               <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <benefit.icon className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {benefit.description}
               </p>
             </motion.div>
@@ -207,7 +207,7 @@ const WhyOTHM = () => {
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-shrink-0">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                <Users className="w-10 h-10 text-white" />
+                <Users className="w-10 h-10 text-foreground" />
               </div>
             </div>
             <div className="flex-1 text-center lg:text-left">
@@ -216,14 +216,14 @@ const WhyOTHM = () => {
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
-              <p className="text-lg text-slate-300 italic mb-4">
+              <p className="text-lg text-muted-foreground italic mb-4">
                 &quot;The OTHM Level 5 Diploma at Greenway Academy was a game-changer for
                 me. After completing the course, I got direct entry into the final
                 year of my Business Administration degree at a UK university. The
                 support from instructors was exceptional.&quot;
               </p>
-              <div className="text-white font-semibold">Mohammad Rahman</div>
-              <div className="text-slate-400 text-sm">
+              <div className="text-foreground font-semibold">Mohammad Rahman</div>
+              <div className="text-muted-foreground text-sm">
                 OTHM Level 5 Graduate | Now at University of Birmingham
               </div>
             </div>

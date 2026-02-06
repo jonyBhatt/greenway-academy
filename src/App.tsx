@@ -19,7 +19,7 @@ import EnrollPage from './pages/EnrollPage';
 // Scroll to top on route change
 const ScrollToTop = () => {
   const location = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -94,10 +94,10 @@ function App() {
     <ThemeProvider>
       <Router>
         <ScrollToTop />
-        <div className="min-h-screen bg-slate-950 text-white overflow-x-hidden">
+        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
           {/* Loading Screen */}
           {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
-          
+
           {/* Main Content */}
           {!isLoading && (
             <>

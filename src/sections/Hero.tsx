@@ -205,7 +205,7 @@ const Hero = () => {
           className="inline-flex items-center gap-2 px-4 py-2 mb-6 sm:mb-8 glass rounded-full"
         >
           <Sparkles className="w-4 h-4 text-yellow-400" />
-          <span className="text-xs sm:text-sm font-medium text-slate-200">
+          <span className="text-xs sm:text-sm font-medium text-muted-foreground">
             Guaranteed Entry to Top Universities
           </span>
         </motion.div>
@@ -218,7 +218,7 @@ const Hero = () => {
               className={`inline-block mr-2 sm:mr-4 ${
                 index === 2 || index === 3
                   ? 'bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-500 to-blue-500'
-                  : 'text-white'
+                  : 'text-foreground'
               }`}
               initial={{ opacity: 0, y: 50, clipPath: 'inset(0 100% 0 0)' }}
               animate={{ opacity: 1, y: 0, clipPath: 'inset(0 0% 0 0)' }}

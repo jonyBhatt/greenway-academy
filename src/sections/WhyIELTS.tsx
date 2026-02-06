@@ -65,7 +65,7 @@ const WhyIELTS = () => {
     <section
       id="why-ielts"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -95,7 +95,7 @@ const WhyIELTS = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6"
             >
               Why Choose <span className="text-green-400">IELTS</span>?
             </motion.h2>
@@ -104,7 +104,7 @@ const WhyIELTS = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-300 text-lg leading-relaxed"
+              className="text-muted-foreground text-lg leading-relaxed"
             >
               The International English Language Testing System (IELTS) is the
               world&apos;s most popular English language proficiency test for higher
@@ -133,7 +133,7 @@ const WhyIELTS = () => {
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-slate-400">{stat.label}</div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -153,10 +153,10 @@ const WhyIELTS = () => {
               <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <benefit.icon className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 {benefit.title}
               </h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {benefit.description}
               </p>
             </motion.div>
@@ -173,7 +173,7 @@ const WhyIELTS = () => {
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-shrink-0">
               <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-                <Users className="w-10 h-10 text-white" />
+                <Users className="w-10 h-10 text-foreground" />
               </div>
             </div>
             <div className="flex-1 text-center lg:text-left">
@@ -182,14 +182,14 @@ const WhyIELTS = () => {
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
-              <p className="text-lg text-slate-300 italic mb-4">
+              <p className="text-lg text-muted-foreground italic mb-4">
                 &quot;Thanks to Greenway Academy&apos;s IELTS preparation course, I achieved
                 a band score of 8.0 and got accepted into my dream university in
                 the UK. The instructors were incredibly supportive and the mock
                 tests really helped me prepare.&quot;
               </p>
-              <div className="text-white font-semibold">Sarah Ahmed</div>
-              <div className="text-slate-400 text-sm">
+              <div className="text-foreground font-semibold">Sarah Ahmed</div>
+              <div className="text-muted-foreground text-sm">
                 IELTS Score: 8.0 | Now studying at University of Manchester
               </div>
             </div>

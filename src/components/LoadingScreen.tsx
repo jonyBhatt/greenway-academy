@@ -38,7 +38,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-slate-950">
+          <div className="absolute inset-0 bg-background">
             {/* Animated Gradient Orbs */}
             <motion.div
               className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full"
@@ -209,7 +209,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <h1 className="text-4xl font-bold text-white tracking-tight">
+              <h1 className="text-4xl font-bold text-foreground tracking-tight">
                 GREENWAY
               </h1>
               <p className="text-xl font-medium text-blue-400">ACADEMY</p>
@@ -222,7 +222,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              <span className="text-slate-400 text-sm">Loading</span>
+              <span className="text-muted-foreground text-sm">Loading</span>
               <motion.span
                 className="flex gap-1"
                 animate={{ opacity: [0.5, 1, 0.5] }}
@@ -268,7 +268,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
                 {progress < 30 && (
                   <motion.p
                     key="msg1"
-                    className="text-slate-500 text-sm"
+                    className="text-muted-foreground/60 text-sm"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -279,7 +279,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
                 {progress >= 30 && progress < 60 && (
                   <motion.p
                     key="msg2"
-                    className="text-slate-500 text-sm"
+                    className="text-muted-foreground/60 text-sm"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
@@ -290,7 +290,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
                 {progress >= 60 && progress < 90 && (
                   <motion.p
                     key="msg3"
-                    className="text-slate-500 text-sm"
+                    className="text-muted-foreground/60 text-sm"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}

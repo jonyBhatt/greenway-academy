@@ -46,8 +46,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-slate-950 border-t border-white/5">
-      {/* Animated Top Border */}
+    <footer className="relative bg-background border-t border-white/5">
       <div className="absolute top-0 left-0 right-0 h-px">
         <motion.div
           className="h-full bg-gradient-to-r from-transparent via-green-500 to-transparent"
@@ -137,9 +136,9 @@ const Footer = () => {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-slate-400 hover:text-green-400 transition-colors text-sm inline-flex items-center gap-2 group"
+                    className="text-muted-foreground hover:text-green-400 transition-colors text-sm inline-flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-green-400 transition-colors" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-muted group-hover:bg-green-400 transition-colors" />
                     {link.name}
                   </a>
                 </li>
@@ -149,7 +148,7 @@ const Footer = () => {
 
           {/* Programmes */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Programmes</h3>
+            <h3 className="text-foreground font-semibold mb-6">Programmes</h3>
             <ul className="space-y-3">
               {programmes.map((link) => (
                 <li key={link.name}>
@@ -159,7 +158,7 @@ const Footer = () => {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-slate-400 hover:text-green-400 transition-colors text-sm inline-flex items-center gap-2 group"
+                    className="text-muted-foreground hover:text-green-400 transition-colors text-sm inline-flex items-center gap-2 group"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-green-400 transition-colors" />
                     {link.name}

@@ -73,7 +73,7 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'backdrop-blur-xl bg-slate-950/90 border-b border-white/5'
+            ? 'backdrop-blur-xl bg-background/90 border-b border-white/5'
             : 'bg-transparent'
         }`}
       >
@@ -108,7 +108,7 @@ const Navbar = () => {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white tracking-tight">
+                <span className="text-xl font-bold text-foreground tracking-tight">
                   GREENWAY
                 </span>
                 <span className="text-sm font-medium text-blue-400 -mt-1">
@@ -128,7 +128,7 @@ const Navbar = () => {
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
                       <motion.button
-                        className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors underline-grow py-2"
+                        className="flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors underline-grow py-2"
                         whileHover={{ y: -2 }}
                         transition={{ duration: 0.2 }}
                       >
@@ -158,13 +158,13 @@ const Navbar = () => {
                                     e.preventDefault();
                                     scrollToSection(item.href);
                                   }}
-                                  className="flex items-center gap-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 transition-all"
+                                  className="flex items-center gap-3 px-4 py-3 text-muted-foreground hover:text-foreground hover:bg-white/5 transition-all"
                                 >
                                   <GraduationCap className="w-5 h-5 text-green-400" />
                                   <span className="font-medium">{item.name}</span>
                                 </a>
                                 {item.subItems && (
-                                  <div className="bg-slate-900/50">
+                                  <div className="bg-card/50">
                                     {item.subItems.map((subItem) => (
                                       <a
                                         key={subItem.name}
@@ -173,7 +173,7 @@ const Navbar = () => {
                                           e.preventDefault();
                                           scrollToSection(subItem.href);
                                         }}
-                                        className="flex items-center gap-3 px-4 py-2 pl-12 text-sm text-slate-400 hover:text-green-400 hover:bg-white/5 transition-all"
+                                        className="flex items-center gap-3 px-4 py-2 pl-12 text-sm text-muted-foreground hover:text-green-400 hover:bg-white/5 transition-all"
                                       >
                                         <span className="w-1.5 h-1.5 rounded-full bg-green-400/50"></span>
                                         {subItem.name}
@@ -194,7 +194,7 @@ const Navbar = () => {
                         e.preventDefault();
                         scrollToSection(link.href);
                       }}
-                      className="text-slate-300 hover:text-white transition-colors underline-grow py-2"
+                      className="text-muted-foreground hover:text-foreground transition-colors underline-grow py-2"
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}

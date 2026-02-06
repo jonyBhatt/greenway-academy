@@ -13,7 +13,7 @@ const CTA = () => {
       className="relative py-24 lg:py-32 overflow-hidden"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-slate-950">
+      <div className="absolute inset-0 bg-background">
         <motion.div
           className="absolute inset-0"
           style={{
@@ -73,7 +73,7 @@ const CTA = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Ready to Start Your{' '}
             <span className="gradient-text">Journey</span>?
           </h2>
@@ -82,7 +82,7 @@ const CTA = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-300 text-lg mb-10 max-w-2xl mx-auto"
+            className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto"
           >
             Contact us today to learn more about our programmes and how we can help
             you achieve your dreams of studying abroad.
@@ -120,8 +120,8 @@ const CTA = () => {
             <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-colors">
               <Phone className="w-6 h-6 text-green-400" />
             </div>
-            <h3 className="text-white font-semibold mb-2">Phone</h3>
-            <p className="text-slate-400 text-sm">+880 1322-912091</p>
+            <h3 className="text-foreground font-semibold mb-2">Phone</h3>
+            <p className="text-muted-foreground text-sm">+880 1322-912091</p>
           </motion.a>
 
           {/* Email */}
@@ -133,8 +133,8 @@ const CTA = () => {
             <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors">
               <Mail className="w-6 h-6 text-blue-400" />
             </div>
-            <h3 className="text-white font-semibold mb-2">Email</h3>
-            <p className="text-slate-400 text-sm">admin@greenwayacademy.com</p>
+            <h3 className="text-foreground font-semibold mb-2">Email</h3>
+            <p className="text-muted-foreground text-sm">admin@greenwayacademy.com</p>
           </motion.a>
 
           {/* Address */}
@@ -145,8 +145,8 @@ const CTA = () => {
             <div className="w-12 h-12 rounded-lg bg-yellow-500/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-500/30 transition-colors">
               <MapPin className="w-6 h-6 text-yellow-400" />
             </div>
-            <h3 className="text-white font-semibold mb-2">Address</h3>
-            <p className="text-slate-400 text-sm">
+            <h3 className="text-foreground font-semibold mb-2">Address</h3>
+            <p className="text-muted-foreground text-sm">
               76 Satmasjid Road, Level 3, Dhanmondi, Dhaka-1209
             </p>
           </motion.div>

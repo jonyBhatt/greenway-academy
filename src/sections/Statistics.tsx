@@ -18,7 +18,7 @@ const Statistics = () => {
       className="relative py-24 lg:py-32 overflow-hidden"
     >
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-background to-background">
         <motion.div
           className="absolute inset-0"
           style={{
@@ -72,7 +72,7 @@ const Statistics = () => {
           <span className="inline-block text-green-400 font-semibold text-sm uppercase tracking-wider mb-4">
             Our Impact
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
             Numbers That <span className="gradient-text">Speak</span>
           </h2>
         </motion.div>
@@ -116,7 +116,7 @@ const Statistics = () => {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                className="text-slate-400 mt-2 font-medium"
+                className="text-muted-foreground mt-2 font-medium"
               >
                 {stat.label}
               </motion.div>

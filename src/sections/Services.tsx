@@ -77,7 +77,7 @@ const Services = () => {
     <section
       id="services"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -100,7 +100,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6"
           >
             Choose Your <span className="gradient-text">Pathway</span>
           </motion.h2>
@@ -109,7 +109,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-400 text-lg max-w-2xl mx-auto"
+            className="text-muted-foreground text-lg max-w-2xl mx-auto"
           >
             Select the programme that fits your academic goals and start your
             journey to world-class education
@@ -148,24 +148,24 @@ const Services = () => {
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-white mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-3">
                 {programme.title}
               </h3>
 
               {/* Duration Badge */}
               <div className="flex items-center gap-4 mb-4">
-                <span className="flex items-center gap-1.5 text-sm text-slate-400">
-                  <Clock className="w-4 h-4" />
+                <span className="flex items-center gap-1.5 text-sm text-muted-foreground\">
+                  <Clock className="w-4 h-4\" />
                   {programme.duration}
                 </span>
-                <span className="flex items-center gap-1.5 text-sm text-slate-400">
+                <span className="flex items-center gap-1.5 text-sm text-muted-foreground\">
                   <Users className="w-4 h-4" />
                   Online/Offline
                 </span>
               </div>
 
               {/* Description */}
-              <p className="text-slate-400 mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 {programme.description}
               </p>
 
@@ -185,7 +185,7 @@ const Services = () => {
                     <Check
                       className={`w-5 h-5 ${programme.iconColor} flex-shrink-0 mt-0.5`}
                     />
-                    <span className="text-slate-300 text-sm">{feature}</span>
+                    <span className="text-muted-foreground text-sm">{feature}</span>
                   </motion.li>
                 ))}
               </ul>

@@ -62,7 +62,7 @@ const WhyChoose = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-slate-950 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-background overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -86,7 +86,7 @@ const WhyChoose = () => {
                   alt="Graduates celebrating"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
             </div>
 
@@ -102,8 +102,8 @@ const WhyChoose = () => {
                   <Check className="w-5 h-5 text-green-400" />
                 </div>
                 <div>
-                  <div className="text-white font-bold">95%</div>
-                  <div className="text-slate-400 text-xs">Success Rate</div>
+                  <div className="text-foreground font-bold">95%</div>
+                  <div className="text-muted-foreground text-xs">Success Rate</div>
                 </div>
               </div>
             </motion.div>
@@ -127,7 +127,7 @@ const WhyChoose = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight"
             >
               Why Choose{' '}
               <span className="gradient-text">Greenway Academy</span>?
@@ -137,7 +137,7 @@ const WhyChoose = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-400 text-lg mb-8"
+              className="text-muted-foreground text-lg mb-8"
             >
               We provide the best learning environment and support to help you
               achieve your academic and career goals.
@@ -157,12 +157,12 @@ const WhyChoose = () => {
                   <div
                     className={`w-10 h-10 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <feature.icon className="w-5 h-5 text-white" />
+                    <feature.icon className="w-5 h-5 text-foreground" />
                   </div>
-                  <h3 className="text-white font-semibold mb-2">
+                  <h3 className="text-foreground font-semibold mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-slate-400 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </motion.div>
